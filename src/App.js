@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Button from './components/Button'
 import Dice from './components/Dice'
 import './App.css';
@@ -10,6 +10,8 @@ function App() {
     function rollDice() {
       return Math.ceil(Math.random()*6)
   }
+
+
 
   function handleClick() {
       setDice1(rollDice());
