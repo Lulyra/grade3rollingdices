@@ -1,0 +1,29 @@
+[33mcommit a680333f971301a3ddfa8569bdf493d7de1b5a04[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mheroku/master[m[33m)[m
+Author: Lulyra <lulyra77@gmail.com>
+Date:   Mon Jun 29 16:10:05 2020 -0300
+
+    change buildpacks mars/create-react-app
+
+[33mcommit d3843c6d06e6c502aeeb8c8bde6bef02514f6328[m
+Author: Lulyra <lulyra77@gmail.com>
+Date:   Mon Jun 29 16:03:11 2020 -0300
+
+    Correct npme to npm
+
+[33mcommit 40ee7d4b6f1e530a8ee2dece51d694582e98a49e[m
+Author: Lulyra <lulyra77@gmail.com>
+Date:   Mon Jun 29 15:59:56 2020 -0300
+
+    add engines in package.json
+
+[33mcommit e68c19d9cc9a5129a71afca17bab9787d9aeae0e[m
+Author: Lulyra <lulyra77@gmail.com>
+Date:   Mon Jun 29 15:55:35 2020 -0300
+
+    Changing scripts
+
+[33mcommit 1a7c796dc64ce613af03f2670a66aa7830e437d1[m
+Author: Lulyra <lulyra77@gmail.com>
+Date:   Mon Jun 29 15:42:29 2020 -0300
+
+    Initial commit
