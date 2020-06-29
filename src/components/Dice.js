@@ -17,8 +17,8 @@ function Dice(props) {
 
     if(!props.dice) {
         return(
-            <>
-		</>
+            <div>
+		</div>
 	  )
     }
     return (
