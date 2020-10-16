@@ -13,15 +13,13 @@ function App() {
   }
 
   function diceRolling() {
-    const promise = new Promise((resolve) => {
-      for (let i = 0; i < 500; i++) {
-        setTimeout(() => {
-          roll();
-        }, 400);
-      }
-      resolve();
+    const rollPromises = [];
+    for (let i = 0; i < 500; i++) {
+      rollPromises.push(rollPromise());
+    }
+    Promise.all(rollPromises).then(() => {
+      setIsRolling(false);
     });
-    return promise;
   }
 
   function roll() {
@@ -29,14 +27,19 @@ function App() {
     setDice2(rollDice());
   }
 
-  function finalRoll() {
-    setDice1(rollDice());
-    setDice2(rollDice());
-    setIsRolling(!isRolling);
+  function rollPromise() {
+    const promise = new Promise((resolve) => {
+      setTimeout(() => {
+        roll();
+        resolve();
+      }, 400);
+    });
+    return promise;
   }
 
   function handleClick() {
-    diceRolling().then(() => console.log("foi"));
+    setIsRolling(true);
+    diceRolling();
   }
 
   return (
