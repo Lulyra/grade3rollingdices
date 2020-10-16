@@ -2,29 +2,55 @@
   margin-top: 7%;
   text-align: center;
 }
+@media only screen and (min-width: 800px) {
+  .dices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 5vw;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .dices {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 5vw;
+  }
+}
+
 .dice {
   border: 2px black solid;
   margin: 5px;
   border-radius: 5%;
   margin-bottom: 5%;
-}:root {
-   --backgroundColor: rgba(21, 107, 40);
-   --colorShadeA: rgb(106, 163, 137);
-   --colorShadeB: rgb(121, 186, 156);
-   --colorShadeC: rgb(150, 232, 195);
-   --colorShadeD: rgb(187, 232, 211);
-   --colorShadeE: rgb(205, 255, 232);
- }
+}
+:root {
+  --backgroundColor: rgba(21, 107, 40);
+  --colorShadeA: rgb(106, 163, 137);
+  --colorShadeB: rgb(121, 186, 156);
+  --colorShadeC: rgb(150, 232, 195);
+  --colorShadeD: rgb(187, 232, 211);
+  --colorShadeE: rgb(205, 255, 232);
+}
+button {
+  display: inline-block;
+}
+
+button:disabled {
+  display: none;
+}
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 * {
   box-sizing: border-box;
 }
-*::before, *::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 body {
-  font-family: 'OpenSans', sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-size: 1rem;
   line-height: 2;
   display: flex;
@@ -43,7 +69,7 @@ button {
   vertical-align: middle;
   text-decoration: none;
   font-size: 1.5rem;
-  color:var(--colorShadeA);
+  color: var(--colorShadeA);
   font-weight: 700;
   text-transform: uppercase;
   font-family: inherit;
@@ -59,7 +85,7 @@ button.big-button {
 }
 button.big-button::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   top: 0;
@@ -72,7 +98,6 @@ button.big-button::before {
   transform: translate3d(0, 0.75em, -1em);
   transition: all 175ms cubic-bezier(0, 0, 1, 1);
 }
-
 
 button.big-button:hover {
   background: var(--colorShadeD);
@@ -91,5 +116,4 @@ button.big-button:active::before {
   transform: translate3d(0, 0, -1em);
 
   box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
-
 }
